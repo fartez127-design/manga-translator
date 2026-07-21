@@ -1,8 +1,0 @@
-{
-  "appId": "com.mangathai.app",
-  "appName": "Manga Translator TH",
-  "webDir": ".",
-  "server": {
-    "androidScheme": "https"
-  }
-}
