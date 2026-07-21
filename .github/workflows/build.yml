@@ -22,9 +22,14 @@ jobs:
         npm init -y
         npm install @capacitor/core @capacitor/cli @capacitor/android
 
-    - name: Initialize and Add Android
+    - name: Setup Web Dir and Config
       run: |
-        npx cap init "Manga Translator TH" "com.mangathai.app" --web-dir="."
+        mkdir -p www
+        cp index.html www/
+        echo '{ "appId": "com.mangathai.app", "appName": "Manga Translator TH", "webDir": "www" }' > capacitor.config.json
+
+    - name: Add Android
+      run: |
         npx cap add android
         npx cap copy
 
