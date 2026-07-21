@@ -17,10 +17,10 @@ jobs:
       with:
         node-version: 20
 
-    - name: Install Capacitor (Latest)
+    - name: Install Capacitor (Stable v6)
       run: |
         npm init -y
-        npm install @capacitor/core @capacitor/cli @capacitor/android@latest
+        npm install @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6
 
     - name: Setup Web Dir and Config
       run: |
